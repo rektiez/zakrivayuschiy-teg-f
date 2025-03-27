@@ -11,6 +11,46 @@
 */
 
 .page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--main-font, sans-serif);
+  font-variation-settings: "wght" var(--main-font-weight);
+  font-size: var(--font-size);
+  background-image: var(--bg-image);
+  background-attachment: fixed;
+  background-position: center;
+  
+  
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--bg-color);
+  margin-block: 100px;
+  padding-block: 128px;
+  font-family: var(--accent-font);
+  text-transform: uppercase;
+  gap: 20px;
+  border: 2px solid #000;
+  
+}
+.header,
+.main{
+  inline-size: var(--page-width);
+
+}
+
+.header__title {
+font-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
+font-weight: var(--main-font-weight);
+}
+
+.header__subtitle {
+  font-size: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
+   font-weight: var(--main-font-weight);
 }
