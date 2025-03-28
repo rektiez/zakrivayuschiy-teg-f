@@ -36,7 +36,7 @@
   font-family: var(--accent-font);
   text-transform: uppercase;
   gap: 20px;
-  border: 2px solid #000;
+  border: 2px solid var(--border-color, #000);
   
 }
 .header,
@@ -54,3 +54,149 @@ font-weight: var(--main-font-weight);
   font-size: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
    font-weight: var(--main-font-weight);
 }
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+  .card {
+  border: 2px solid var(--border-color , #000);
+  background-color: #fff; }
+
+  .card__title {
+    padding: 4px 9px;
+    font-size: var(--font-size);
+    font-variation-settings: "wght" 700;
+    border-block-end: 2px solid var(--border-color);
+  }
+
+  .card__image-container {
+    position: relative;
+    overflow: hidden;
+  }
+  .card__image {
+    object-position: center;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    inline-size: 100%;
+  }
+  .card_label {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-family: var(--accent-font);
+    font-weight: var(--main-font-weight);
+    font-size: 14px;
+    text-shadow: 0 0 1px #fff;
+    mix-blend-mode: hard-light;
+    opacity: 0.5; }
+   
+ 
+
+    .card__content {
+      display: flex;
+      flex-direction: column;
+      gap: 27px;
+      margin-block-end: 0;
+      padding: 25px;
+      padding-block-end: 0px;
+      font-size: var(--font-size, 18px);
+      border-block-start: 2px solid var(--border-color, #000);
+      font-family: var(--main-font, sans-serif);
+      font-weight: var(--main-font-weight, 400);
+      line-height: 21px;
+      letter-spacing: 0;
+    }
+    .card__buttons {
+    display: flex;
+    flex-direction: column;
+    align-self: end;
+      gap: 4px;
+    }
+    .card__icon-button {
+      background-color: transparent;
+      border: 2px solid transparent;
+      height: 38px;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .card__like-button {
+      min-inline-size: 130px;
+      padding: 0;
+    }
+
+    .button  {
+      position: relative;
+      background: transparent;
+      font-family: var(--accent-font), cursive;
+      font-size: 14px;
+      color: var(--text-color, #000);
+      border: 2px solid var(--border-color, #000);
+      cursor: pointer;
+      transition: box-shadow 0.3s ease; }
+
+      .button-decor:focus{
+        outline: none;
+      }
+
+      .button-decor::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: #000;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.5s ease-in-out;
+      }
+      .button-decor:hover::before {
+        transform: scaleX(1);
+      }
+      .button-decor:not(.card__icon-button):focus-visible {
+        box-shadow: 2px 2px 0 #000;
+      }
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  @supports (-webkit-text-stroke: 1px #fff) {
+    .card__label {
+      text-shadow: none;
+      -webkit-text-stroke: 1px #fff;
+    }
+  }

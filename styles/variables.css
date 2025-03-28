@@ -6,7 +6,9 @@
     --title-weight: 700;
     --main-font-size: 18px;
     --text-color: #000;
-    --shadow-color: #fff;
+    --border-color: #000;
+    --heart-contour-color: #000;
+    --heart-sparks-color: #ff0000;
     --bg-color: #fff;
     --bg-image: repeating-linear-gradient(
         90deg ,#d3d3d3 0 2px, rgb(0 0 0 / 0) 2px 4px)
@@ -16,6 +18,6 @@
         ,
         linear-gradient(
         to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
-
+        
 
 }
