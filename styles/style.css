@@ -59,7 +59,7 @@
 
 .card {
   border: 2px solid var(--border-color, #000);
-  background-color: #fff;
+  background-color: var(--bg-color);
 }
 
 .card__title {
@@ -90,6 +90,7 @@
   text-shadow: 0 0 1px #fff;
   mix-blend-mode: hard-light;
   opacity: 0.5;
+  z-index: 1;
 }
 
 .card__description {
@@ -128,7 +129,7 @@
 .button-decor {
   position: relative;
   align-items: center;
-  background-color: #fff;
+  background-color: var(--bg-color);
   font-family: var(--accent-font), fantasy;
   font-size: 14px;
   color: #fff;
