@@ -30,7 +30,7 @@
   background-color: var(--bg-color);
   margin-block: 100px;
   padding-block: 128px;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font, fantasy);
   text-transform: uppercase;
   gap: 20px;
   border: 2px solid var(--border-color, #000);
@@ -84,7 +84,7 @@
   position: absolute;
   top: 25px;
   right: 25px;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font, fantasy);
   font-weight: var(--main-font-weight);
   font-size: 14px;
   text-shadow: 0 0 1px #fff;
@@ -108,19 +108,26 @@
 .card__buttons {
   display: flex;
   align-self: end;
-  gap: 7px;
+  gap: 4px;
   margin-block-end: 25px;
 }
 
 .card__icon-button {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-self: center;
   height: 38px;
   padding: 0;
   background-color: transparent;
   border: 2px solid transparent;
+  transition: border 0.3s ease;
 }
+
+.card__icon-button:focus-visible {
+  border: 2px solid #000;
+  outline: none;
+}
+
 .card__like-button {
   min-inline-size: 130px;
   padding: 0;
@@ -130,7 +137,7 @@
   position: relative;
   align-items: center;
   background-color: var(--bg-color);
-  font-family: var(--accent-font), fantasy;
+  font-family: var(--accent-font, fantasy);
   font-size: 14px;
   color: #fff;
   border: 2px solid var(--border-color, #000);
@@ -175,8 +182,8 @@
 }
 
 .floppy__svg {
-  width: 21px;
-  height: 21px;
+  width: 23px;
+  height: 23px;
 }
 .dialog__svg {
   width: 39px;
@@ -262,6 +269,9 @@
 }
 
 @media (width <= 375px) {
+  .header {
+    padding-block: 120px;
+  }
   .main {
     margin-block-end: 100px;
   }
@@ -279,8 +289,8 @@
   }
 
   .floppy__svg {
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
   }
 }
 @supports (-webkit-text-stroke: 1px #fff) {
