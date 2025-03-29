@@ -292,6 +292,10 @@
     width: 32px;
     height: 32px;
   }
+
+  .card__label {
+    right: 12px;
+  }
 }
 @supports (-webkit-text-stroke: 1px #fff) {
   .card__label {
